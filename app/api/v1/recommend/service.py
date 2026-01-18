@@ -16,10 +16,10 @@ warnings.filterwarnings('ignore', category=UserWarning)
 # Get the directory where this script is located
 MODEL_PATH = "app/models/recommender.joblib"
 
-# artifact = joblib.load(MODEL_PATH)
-# vectorizer = artifact["vectorizer"]
-# X = artifact["X"]
-# meta = artifact["meta"]
+artifact = joblib.load(MODEL_PATH)
+vectorizer = artifact["vectorizer"]
+X = artifact["X"]
+meta = artifact["meta"]
 
 def search_predict(query, top_k=5, content_type=None):
     logger.info(f"MODEL_PATH: {MODEL_PATH}")
