@@ -1,6 +1,6 @@
 services:
-  api-siwapan:
+  api-plum:
     build: .
     ports:
-      - "8001:8000"
+      - "8337:8000"
     restart: always
