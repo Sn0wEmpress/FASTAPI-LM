@@ -12,10 +12,23 @@ app_router.include_router(
 )
 
 app_router.include_router(
+<<<<<<< HEAD
+=======
+    flight_router,
+    prefix='/flight',
+    tags=['Flight Price Prediction']
+)
+
+app_router.include_router(
+>>>>>>> upstream/main
     depression_router,
     prefix='/depression',
     tags=['Depression']
 )
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main
 
 app_router.include_router(
     flight_router,

@@ -1,6 +1,10 @@
 from fastapi import APIRouter
 from .service import get_depression
+<<<<<<< HEAD
 from .schema import DepressionRequest, DepressionUpdate
+=======
+from .schema import DepressionRequest,DepressionUpdate
+>>>>>>> upstream/main
 
 router = APIRouter()
 
@@ -8,6 +12,7 @@ router = APIRouter()
 def assess_depression(data: DepressionRequest):
     return get_depression()
 
+<<<<<<< HEAD
 @router.get("/info", tags=['Depression'])
 def get_info():
     return {"service": "Depression Assessment API", "version": "1.0"}
@@ -23,3 +28,22 @@ def update_depression_record(record_id: int, data: DepressionUpdate):
 @router.patch("/depression", tags=['Depression'])
 def partial_update_depression_record(record_id: int, data: dict):
     return { "status": "partially updated", "record_id": record_id, "data": data }
+=======
+
+@router.get('/info', tags=['Depression'])
+def info():
+    return {"service": "Depression Assessment API", "version": "1.0"}
+
+
+@router.delete('/depression', tags=['Depression'])
+def delete_depression_record(record_id: int):
+    return {"status": "deleted", "record_id": record_id}
+
+@router.put('/depression', tags=['Depression'])
+def update_depression_record(record_id: int, data: DepressionUpdate):
+    return {"status": "updated", "record_id": record_id, "data": data}
+
+@router.patch('/depression', tags=['Depression'])
+def partial_update_depression_record(record_id: int, data: dict):
+    return {"status": "partially updated", "record_id": record_id, "data": data}
+>>>>>>> upstream/main
