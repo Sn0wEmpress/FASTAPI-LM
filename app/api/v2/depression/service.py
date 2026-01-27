@@ -6,7 +6,7 @@ from loguru import logger
 
 
 MODEL_PATH = (
-    Path(__file__).parent.parent.parent.parent / "models" / "depression_model.joblib"
+    Path(__file__).parent.parent.parent / "models" / "depression_model.joblib"
 )
 
 # Load model once at module level
