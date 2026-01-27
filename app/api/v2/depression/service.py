@@ -1,13 +1,14 @@
 import joblib
 import pandas as pd
-from pathlib import Path
+# from pathlib import Path
 from .schema import DepressionRequest, DepressionResponse
 from loguru import logger
 
 
-MODEL_PATH = (
-    Path(__file__).parent.parent.parent / "models" / "depression_model.joblib"
-)
+# MODEL_PATH = (
+#     Path(__file__).parent.parent.parent.parent / "models" / "depression_model.joblib"
+# )
+MODEL_PATH = "app/models/depression_model.joblib"
 
 # Load model once at module level
 artifact = joblib.load(MODEL_PATH)
